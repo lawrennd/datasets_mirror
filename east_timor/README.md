@@ -22,6 +22,13 @@ Binary classification dataset used in GPSS / GPy lab notebooks for non-Gaussian 
 
 No generation script or upstream GIS sources were located in the teaching repos. Regenerating *de novo* would require recovering the original region/language map sources; until then this mirror preserves the teaching artifact as used historically.
 
+### Research notes (2026-10-17)
+
+- No other public host of `EastTimor.pickle` / `EastTimor2.pickle` was found.
+- AISTATS 2014 (Andrade-Pacheco, Hensman, Zwiessele, Lawrence) does not document this file.
+- Open Timor language polygons (e.g. Glottography / Edwards 2020, CC-BY-4.0) and census PDF maps are **not** drop-in replacements: they do not reproduce the 67-region binary teaching labels.
+- Prefer this mirror for GPSS reproducibility. A future regenerable dataset should credit Edwards/Glottography separately.
+
 ## Intended consumer
 
 `pods.datasets.east_timor` in [lawrennd/ods](https://github.com/lawrennd/ods) (backlog: `2026-10-17_east-timor-dataset`).
