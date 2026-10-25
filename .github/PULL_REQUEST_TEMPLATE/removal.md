@@ -4,7 +4,7 @@ This template is for asking us to delete a mirrored dataset. Open a pull request
 
 ### Dataset
 
-- Directory to remove:
+- Directory being suggested for removal:
 - Files inside it (or “entire directory”):
 - Original source, if known (see `original_urls` in [lawrennd/ods](https://github.com/lawrennd/ods/blob/main/pods/data_resources.yml)):
 
