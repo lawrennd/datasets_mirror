@@ -1,38 +1,54 @@
-# UK apartment prices (HM Land Registry monthly Price Paid, 2012)
+# UK apartment prices (HM Land Registry monthly Price Paid, 2012–2013)
 
-Contemporaneous monthly Price Paid Data (PPD) releases for February–October 2012, recovered from the Internet Archive. These are the files Hensman, Fusi and Lawrence (2013) downloaded for the apartment-price experiment in *Gaussian Processes for Big Data*, UAI 2013, §4.2.
+Contemporaneous monthly Price Paid Data (PPD) releases for February 2012–September 2013. February–October 2012 are the files Hensman, Fusi and Lawrence (2013) downloaded for the apartment-price experiment in *Gaussian Processes for Big Data*, UAI 2013, §4.2. November 2012–September 2013 extend that series so reconstructions can choose a wider lodgement-month window.
 
-The current Land Registry yearly snapshot (`pp-2012.csv`) is a later revision of the same register. It does not match the monthly files that were public in late 2012 / early 2013. This folder keeps those monthly releases so reconstructions can choose among them.
+The current Land Registry yearly snapshot (`pp-2012.csv`) is a later revision of the same register. It does not match the monthly files that were public in 2012–2013. This folder keeps those monthly releases so reconstructions can choose among them.
 
 ## Contents
 
-`monthly_2012/` holds one CSV per lodgement month, renamed `YYYY-MM.csv`. Original Land Registry filenames are in the table below.
+`monthly_2012/` and `monthly_2013/` hold one CSV per lodgement month, renamed `YYYY-MM.csv`. Original Land Registry filenames are in the table below.
 
 The files are the official monthly PPD as published (15 columns, including Record Status). They are not a derived extract: apartments vs houses, date windows, COU vs F+A, and postcode geocoding are left to the consumer.
 
 Encoding is mixed. February 2012 has a header row. July 2012 contains a `£` as latin-1 `0xa3`. Dates mix ISO and `DD/MM/YYYY`.
 
+There is no January 2012 monthly file: the data.gov.uk dataset was added in June 2012 and starts at February. From December 2013 the page switched to yearly `pp-YYYY.csv` files; October 2013 and later monthlies were not archived.
+
 ## Provenance
 
-Listed on the January 2013 data.gov.uk dataset page
+Listed on successive snapshots of the data.gov.uk dataset page
 [land-registry-monthly-price-paid-data](https://web.archive.org/web/20130127041544/http://data.gov.uk/dataset/land-registry-monthly-price-paid-data)
 as downloads from `http://www.landregistry.gov.uk/__data/assets/file/...`.
 
-Captures are the earliest Wayback snapshot still available for each file, preferring October 2012 so later replacements are not used. The October CSV itself was only archived in April 2013. A later June capture is larger than the October 2012 file; this mirror keeps the October 2012 June release.
+Captures are the earliest archived snapshot still available for each file. February–October 2012 come from the Internet Archive, preferring October 2012 so later replacements are not used. The October CSV itself was only archived in April 2013. A later June 2012 capture is larger than the October 2012 file; this mirror keeps the October 2012 June release.
 
-| File | Original name | Wayback timestamp | Original URL |
-|---|---|---|---|
-| `monthly_2012/2012-02.csv` | `ppms.csv` | `20121007175146` | http://www.landregistry.gov.uk/__data/assets/file/0017/4292/ppms.csv |
-| `monthly_2012/2012-03.csv` | `PPMS_0312.csv` | `20121007175436` | http://www.landregistry.gov.uk/__data/assets/file/0014/6602/PPMS_0312.csv |
-| `monthly_2012/2012-04.csv` | `ppms-april-with-columns.csv` | `20121004172350` | http://www.landregistry.gov.uk/__data/assets/file/0015/11490/ppms-april-with-columns.csv |
-| `monthly_2012/2012-05.csv` | `ppms-may-with-columns.csv` | `20121007174936` | http://www.landregistry.gov.uk/__data/assets/file/0017/13661/ppms-may-with-columns.csv |
-| `monthly_2012/2012-06.csv` | `ppms-june-with-columns.csv` | `20121007175256` | http://www.landregistry.gov.uk/__data/assets/file/0019/18307/ppms-june-with-columns.csv |
-| `monthly_2012/2012-07.csv` | `ppms-july-with-columns.csv` | `20121007175415` | http://www.landregistry.gov.uk/__data/assets/file/0003/21486/ppms-july-with-columns.csv |
-| `monthly_2012/2012-08.csv` | `ppms-august-with-columns.csv` | `20121007175308` | http://www.landregistry.gov.uk/__data/assets/file/0020/23618/ppms-august-with-columns.csv |
-| `monthly_2012/2012-09.csv` | `ppms-september-with-columns.csv` | `20121031132020` | http://www.landregistry.gov.uk/__data/assets/file/0013/26023/ppms-september-with-columns.csv |
-| `monthly_2012/2012-10.csv` | `PPMS_update_31_Oct_2012_ew_csv_with-columns.csv` | `20130413003342` | http://www.landregistry.gov.uk/__data/assets/file/0008/28664/PPMS_update_31_Oct_2012_ew_csv_with-columns.csv |
+November 2012–September 2013 come from the [UK Government Web Archive](https://webarchive.nationalarchives.gov.uk/). The Internet Archive stored November 2012, December 2012 and January 2013, but not the February–September 2013 CSVs. June–September 2013 were first captured in January 2014.
+
+| File | Original name | Archive | Timestamp | Original URL |
+|---|---|---|---|---|
+| `monthly_2012/2012-02.csv` | `ppms.csv` | Wayback | `20121007175146` | http://www.landregistry.gov.uk/__data/assets/file/0017/4292/ppms.csv |
+| `monthly_2012/2012-03.csv` | `PPMS_0312.csv` | Wayback | `20121007175436` | http://www.landregistry.gov.uk/__data/assets/file/0014/6602/PPMS_0312.csv |
+| `monthly_2012/2012-04.csv` | `ppms-april-with-columns.csv` | Wayback | `20121004172350` | http://www.landregistry.gov.uk/__data/assets/file/0015/11490/ppms-april-with-columns.csv |
+| `monthly_2012/2012-05.csv` | `ppms-may-with-columns.csv` | Wayback | `20121007174936` | http://www.landregistry.gov.uk/__data/assets/file/0017/13661/ppms-may-with-columns.csv |
+| `monthly_2012/2012-06.csv` | `ppms-june-with-columns.csv` | Wayback | `20121007175256` | http://www.landregistry.gov.uk/__data/assets/file/0019/18307/ppms-june-with-columns.csv |
+| `monthly_2012/2012-07.csv` | `ppms-july-with-columns.csv` | Wayback | `20121007175415` | http://www.landregistry.gov.uk/__data/assets/file/0003/21486/ppms-july-with-columns.csv |
+| `monthly_2012/2012-08.csv` | `ppms-august-with-columns.csv` | Wayback | `20121007175308` | http://www.landregistry.gov.uk/__data/assets/file/0020/23618/ppms-august-with-columns.csv |
+| `monthly_2012/2012-09.csv` | `ppms-september-with-columns.csv` | Wayback | `20121031132020` | http://www.landregistry.gov.uk/__data/assets/file/0013/26023/ppms-september-with-columns.csv |
+| `monthly_2012/2012-10.csv` | `PPMS_update_31_Oct_2012_ew_csv_with-columns.csv` | Wayback | `20130413003342` | http://www.landregistry.gov.uk/__data/assets/file/0008/28664/PPMS_update_31_Oct_2012_ew_csv_with-columns.csv |
+| `monthly_2012/2012-11.csv` | `ppms-november-with-columns.csv` | UKGWA | `20130103035624` | http://www.landregistry.gov.uk/__data/assets/file/0013/30235/ppms-november-with-columns.csv |
+| `monthly_2012/2012-12.csv` | `ppms-december-with-columns.csv` | UKGWA | `20130402202750` | http://www.landregistry.gov.uk/__data/assets/file/0015/32343/ppms-december-with-columns.csv |
+| `monthly_2013/2013-01.csv` | `ppms-january-with-columns.csv` | UKGWA | `20130402202912` | http://www.landregistry.gov.uk/__data/assets/file/0003/34806/ppms-january-with-columns.csv |
+| `monthly_2013/2013-02.csv` | `ppms-february-with-columns.csv` | UKGWA | `20130402202810` | http://www.landregistry.gov.uk/__data/assets/file/0003/37551/ppms-february-with-columns.csv |
+| `monthly_2013/2013-03.csv` | `ppms-march-2013-with-columns.csv` | UKGWA | `20130704194603` | http://www.landregistry.gov.uk/__data/assets/file/0016/40354/ppms-march-2013-with-columns.csv |
+| `monthly_2013/2013-04.csv` | `ppms-april-2013-with-columns.csv` | UKGWA | `20130704194527` | http://www.landregistry.gov.uk/__data/assets/file/0007/42739/ppms-april-2013-with-columns.csv |
+| `monthly_2013/2013-05.csv` | `ppms-may-2013-with-columns.csv` | UKGWA | `20130704194626` | http://www.landregistry.gov.uk/__data/assets/file/0019/46090/ppms-may-2013-with-columns.csv |
+| `monthly_2013/2013-06.csv` | `PPMS_Jun_2013_ew_with-columns.csv` | UKGWA | `20140105085440` | http://www.landregistry.gov.uk/__data/assets/file/0005/49505/PPMS_Jun_2013_ew_with-columns.csv |
+| `monthly_2013/2013-07.csv` | `PPMS_update_31_Jul_2013_ew_with_columns.csv` | UKGWA | `20140105085445` | http://www.landregistry.gov.uk/__data/assets/file/0006/53763/PPMS_update_31_Jul_2013_ew_with_columns.csv |
+| `monthly_2013/2013-08.csv` | `PPMS_update_31_Aug_2013_ew_with_columns.csv` | UKGWA | `20140105085452` | http://www.landregistry.gov.uk/__data/assets/file/0004/55291/PPMS_update_31_Aug_2013_ew_with_columns.csv |
+| `monthly_2013/2013-09.csv` | `PPMS_update_30_Sep_2013_ew_with_columns.csv` | UKGWA | `20140105085501` | http://www.landregistry.gov.uk/__data/assets/file/0015/61323/PPMS_update_30_Sep_2013_ew_with_columns.csv |
 
 Wayback bytes: `https://web.archive.org/web/{timestamp}id_/{original URL}`.
+UKGWA bytes: `https://webarchive.nationalarchives.gov.uk/ukgwa/{timestamp}id_/{original URL}`.
 
 SHA-256 of the mirrored files:
 
@@ -46,14 +62,25 @@ bc2f6cd39e00f23a080bd6f1c262310e2dc7df33bcbb11431e5ac392d5d5b5c2  monthly_2012/2
 bbba9891eeb19550ea4d63ed006d1ae98b1dcb64fe64ee4ad17afdf5db7b24f5  monthly_2012/2012-08.csv
 32f39900eb77040792850b8503665d49df84a0a0fb79f9c49481879e7e573214  monthly_2012/2012-09.csv
 b8c472b90715203a353d01ff2a12d0b4e09fd5f9e17df07ed250a4ed4fdd2a54  monthly_2012/2012-10.csv
+0e8379bfde9a7231cdb22896831f26ec454b63401e41a42116215a89197ba16a  monthly_2012/2012-11.csv
+753113a6dcb676a879476ee3404ba8ce249a413b48dac59ee4ce3508c02f1291  monthly_2012/2012-12.csv
+64df3960a65fee95ed1db6c3f93ebde36478de16d3fd5a111b4d5aaa7928fcac  monthly_2013/2013-01.csv
+deb0ef8315e2eb3e1684b8bfb9c64c6b441e5f9806b47f526f425abaf975da74  monthly_2013/2013-02.csv
+e8e7c9f77ef7828319e24a3fcd7b8412b7c85c6380af1135eafd2957b42545c9  monthly_2013/2013-03.csv
+337bfffd8d269d1a0cf5cbb9338d0929fbe41f7d0d41ef29c35137aeb85f8c2e  monthly_2013/2013-04.csv
+c62fe1cd178ba2eaef2e1238ade8de55d3fbee25101f2016724dde39d5adfb54  monthly_2013/2013-05.csv
+ba1b517c0f851cc4c498925aa662ccf907311425b96a8b4aea8813f8c1174a7a  monthly_2013/2013-06.csv
+c868a21ba5b1c4132feda8cf27fda6814bb6a20913ae2bee74fa7a21f43eac55  monthly_2013/2013-07.csv
+2f095ffa99adf382ebbe9e051e8ecac60ef69e5f810dde749fb302dc0d30cf47  monthly_2013/2013-08.csv
+28eddf204663911161b725add3d2792bf96ef1b18930d4b2ac30157d5ec44fdc  monthly_2013/2013-09.csv
 ```
 
 ## Licence
 
-Contains HM Land Registry data © Crown copyright and database right 2012.
+Contains HM Land Registry data © Crown copyright and database right 2012–2013.
 This data is licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-Contains Royal Mail data © Royal Mail copyright and database right 2012.
-Contains National Statistics data © Crown copyright and database right 2012.
+Contains Royal Mail data © Royal Mail copyright and database right 2012–2013.
+Contains National Statistics data © Crown copyright and database right 2012–2013.
 
 These files are the official Price Paid monthly publications. Address fields in them are subject to PAF terms in the original release; this mirror is of those publications, not a separately derived address product.
 
